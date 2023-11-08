@@ -1,8 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Verdana';
 }
-
 body {
 	background-image: url('source/img/flavr.png');
 	background-repeat: no-repeat;
@@ -18,6 +18,11 @@ p {
     float: bottom;
     color: white;
 	font-size: 160%;
+}
+
+a {
+	text-decoration: none; 
+	color: cyan;
 }
 
 .profile {
@@ -38,21 +43,6 @@ header {
 
 .item1 {
     grid-column: 1 / span 3;
-    grid-row: auto;
-}
-
-.item2 {
-    grid-column: 2 / 2;
-    grid-row: auto;
-}
-
-.item3 {
-    grid-column: auto;
-    grid-row: auto;
-}
-
-.item4 {
-    grid-column: 3;
     grid-row: auto;
 }
 .button {
@@ -79,6 +69,14 @@ header {
     grid-template-rows: auto;
 	margin: 0;
 	padding: 5;
+}
+.flexbox {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	overflow: scroll;
+	justify-content: center;
+	gap: 5%;
 }
 .parallax {
   background-attachment: fixed;
@@ -107,15 +105,3 @@ header {
     background-attachment: scroll;
   }
 }
-.dropdown {
-	position: relative;
-	padding: 14px 16px;
-
-}
-.dropdown-content {
-	display: none;
-	float: inherit;
-	 right: 150%;
-	z-index: 1;
-}
-.dropdown:hover .dropdown-content { display: block; }
